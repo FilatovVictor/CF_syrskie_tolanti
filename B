@@ -1,0 +1,14 @@
+ln = int(input())
+sl = input()
+res = list(sl)
+sp = []
+for i in range(ln):
+    if res[i] != "*":
+        sp.append(res[i])
+    else:
+        if res[i-1] != "*":
+            sp.append(" ")
+s = ""
+for f in range(len(sp)):
+    s += sp[f]
+print(s)
