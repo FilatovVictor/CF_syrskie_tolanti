@@ -1,0 +1,21 @@
+n, m = map(int, input().split()) # покупателей, сахара
+sp = list(map(int, input().split()))
+k = 1
+l = m
+h = True
+while h:
+    s = []
+    for i in range(n):
+        if m >= min(sp[i], k):
+            m -= min(sp[i], k)
+            s.append(min(sp[i], k))
+        else:
+            h = False
+            break
+    if sum(s) == l:
+        h = False
+    else:
+        m = l
+        k += 1
+        print(*s)
+print(k)
