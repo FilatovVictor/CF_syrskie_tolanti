@@ -1,0 +1,19 @@
+c1, c2 = map(int, input().split())
+sp1 = list(map(int, input().split()))
+sp2 = list(map(int, input().split()))
+sp = []
+l = 0
+for i in range(c1):
+    if l == 0:
+        k1 = sp1[i]
+        for j in range(c2):
+            k2 = sp2[j]
+            f = k1 + k2
+            if f in sp1:
+                continue
+            elif f in sp2:
+                continue
+            else:
+                print(i + 1, j + 1)
+                l += 1
+                break
