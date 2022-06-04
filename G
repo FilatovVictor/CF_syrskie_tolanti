@@ -1,0 +1,7 @@
+ln = int(input())
+sl = input()
+ass = []
+for i in range(ln):
+    if sl[i] == "x":
+        ass.append(i+1)
+print(*ass)
