@@ -1,0 +1,2 @@
+sp = list(map(int,input().split()))
+print(sp[0]*sp[2]+sp[1]*sp[3])
